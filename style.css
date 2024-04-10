@@ -8,18 +8,9 @@ body {
     body {
       background-color: red;
     }
-    div#Large,div#Medium {
-        display: none;
+    div{
+        display: block;
     }
-    div#smartphone {
-    font-size: 150px;
-    }
-
-    div#tablettes, div#Pc, div#smartphone{
-     
-        flex-direction: column;
-     
-}
 }
 
 /* On screens that are 480px or greater , set the background color to green */
@@ -28,27 +19,28 @@ body {
       background-color: green;
     }
 div#Large,div#Small{
-    display: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+div {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+div:nth-child(1){
+    width: 66%;
+}
+div:nth-child(2){
+    width: 33%;
+}
+div:nth-child(3){
+    width: 100%;
 }
 
 
-
-div#smartphone{
- width: 66.66%;
- display: flex;
- position: relative;
-}
-
-div#tablettes {
- width: 33.33%;
- display: flex;
- position: relative;
-}
-div#Pc{
- width: 100%;
- display: flex;
- position: relative;
-}
 }
 
 /* On screens that are 1024px or greater , set the background color to blue */
@@ -56,10 +48,10 @@ div#Pc{
     body  {
       background-color: blue;
     }
-div#Small, div#Medium {
-    display: none;
-}
-div#Pc {
-    font-size: 50px;
+
+
+div {
+    display: inline;
+    
 }
 }
